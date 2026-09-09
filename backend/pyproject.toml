@@ -1,0 +1,27 @@
+[project]
+name = "xueyoujing-backend"
+version = "0.1.0"
+description = "学有所径，伴有所成 —— 具备学情诊断与持续规划能力的自适应伴学智能体（后端）"
+requires-python = ">=3.12"
+dependencies = [
+    "alembic>=1.19.2",
+    "fastapi>=0.115",
+    "pydantic>=2.7",
+    "pydantic-settings>=2.3",
+    "sqlalchemy>=2.0",
+    "tzdata>=2026.3",
+    "uvicorn[standard]>=0.30",
+]
+
+[dependency-groups]
+dev = [
+    "httpx>=0.27",
+    "pytest>=8.2",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+
+[tool.uv]
+package = false

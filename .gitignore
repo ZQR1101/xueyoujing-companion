@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Node
+node_modules/
+dist/
+*.local
+
+# 环境与密钥（.env.example 需提交，本地 .env 不提交）
+.env
+.env.local
+.env.*.local
+
+# 运行数据与日志：SQLite 唯一事实源等本地数据不提交
+data/
+logs/
+*.log
+*.db
+*.sqlite3
+
+# IDE / OS
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# 本地过程文件、交付包与设计参考，不提交到源码仓库
+tmp/
+output/
+.commandcode/
+.stitch*/
+stitch/
+frontend/shots/
+backend/.pytest-tmp/
+backend/.test-tmp-*/

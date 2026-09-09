@@ -1,0 +1,46 @@
+/* 仅保留少量全局补充；视觉全部由 stitch tailwind 体系承担 */
+@layer base {
+  :root { --app-sidebar-width: 4rem; }
+  html, body { margin: 0; padding: 0; }
+  body { overscroll-behavior: none; }
+  button, a { -webkit-tap-highlight-color: transparent; }
+}
+* { scrollbar-width: thin; scrollbar-color: #a9bbb7 transparent; }
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-thumb { background: #a9bbb7; border-radius: 999px; }
+::-webkit-scrollbar-track { background: transparent; }
+
+/* 所有一级页面共享同一侧栏占位，避免旧页面按 256px 留白、Tutor 页面又完全不留白。 */
+.app-shell-content {
+  min-width: 0;
+  margin-left: var(--app-sidebar-width);
+  transition: margin-left 200ms ease;
+}
+.app-shell-content > [class*="pl-64"],
+.app-shell-content > [class*="pl-16"] { padding-left: 0 !important; }
+.app-shell-content .stitch-page { padding-left: 28px; }
+
+:focus-visible {
+  outline: 3px solid rgba(44, 110, 99, 0.32);
+  outline-offset: 2px;
+}
+
+@media (max-width: 720px) {
+  :root { --app-sidebar-width: 4rem; }
+  .app-shell-content { margin-left: 4rem !important; }
+  .app-shell-content .stitch-page { padding-left: 16px; padding-right: 16px; }
+}
+
+/* T10-D 学情评估：agent 步骤脉冲环 + 推导依据折叠动画（stitch 原版样式） */
+.agent-step-pulse {
+  box-shadow: 0 0 0 0 rgba(44, 110, 99, 0.4);
+  animation: pulse-ring 2.2s cubic-bezier(0.24, 0, 0.38, 1) infinite;
+}
+@keyframes pulse-ring {
+  0% { box-shadow: 0 0 0 0 rgba(44, 110, 99, 0.45); }
+  70% { box-shadow: 0 0 0 8px rgba(44, 110, 99, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(44, 110, 99, 0); }
+}
+.custom-collapse-body {
+  transition: max-height 0.32s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.25s ease;
+}

@@ -1,0 +1,480 @@
+id="badgesShowcaseSection">
+<!-- 顶部标题与交互筛选栏 -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-ink-100/70 pb-5">
+<div class="space-y-1.5">
+<div class="flex flex-wrap items-center gap-2.5">
+<h2 class="font-academic text-lg sm:text-xl font-bold text-ink-900 tracking-tight">学习徽章藏品馆</h2>
+<span class="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-bamboo-50 text-bamboo-700 border border-bamboo-200/60">已解锁 3 / 25 枚 (12%)</span>
+<span class="text-[11px] text-ink-400 hidden sm:inline-flex items-center gap-1"><i class="ph-fill ph-shield-check text-bamboo-600"></i>真实学情证据链核发</span>
+</div>
+<p class="text-xs text-ink-500 leading-relaxed max-w-2xl">记录你在思维跃迁、自律习惯与真实认知突破上的每一次严谨沉淀，所有勋章严格基于真实学习事件可信上锁与核发，杜绝虚假成就感。</p>
+</div>
+<!-- 状态筛选胶囊 -->
+<div class="flex items-center gap-1.5 p-1 bg-paper-subtle/80 rounded-xl border border-ink-100 self-start sm:self-auto shrink-0">
+<button class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-white text-ink-900 shadow-academic-sm transition-all focus:outline-none" id="filterAllBadges" onclick="filterBadges('all')">
+        全部 (25)
+      </button>
+<button class="px-3 py-1.5 rounded-lg text-xs font-medium text-ink-500 hover:text-ink-900 transition-all focus:outline-none" id="filterUnlockedBadges" onclick="filterBadges('unlocked')">
+        已解锁 (3)
+      </button>
+<button class="px-3 py-1.5 rounded-lg text-xs font-medium text-ink-500 hover:text-ink-900 transition-all focus:outline-none" id="filterLockedBadges" onclick="filterBadges('locked')">
+        待解锁 (22)
+      </button>
+</div>
+</div>
+<!-- 解锁总体进度横条 -->
+<div class="bg-paper-warm/70 p-3 rounded-xl border border-ink-100/70 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+<div class="flex items-center gap-2 text-xs text-ink-700 font-medium">
+<i class="ph-fill ph-trophy text-amberOrange-600 text-sm"></i>
+<span>勋章收藏进展</span>
+<span class="text-[11px] text-ink-400">· 还需点亮 2 枚徽章可达成阶段性「学术探索勋章群」认证</span>
+</div>
+<div class="flex items-center gap-3 w-full sm:w-64">
+<div class="flex-1 h-2 bg-paper-subtle rounded-full overflow-hidden border border-ink-100">
+<div class="h-full bg-gradient-to-r from-bamboo-600 to-emerald-500 rounded-full transition-all duration-500" style="width: 12%"></div>
+</div>
+<span class="text-xs font-bold text-bamboo-700 whitespace-nowrap">3 / 25 (12%)</span>
+</div>
+</div>
+<!-- 25 枚徽章多栏网格 (桌面端 6 列，间距紧凑典雅) -->
+<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3.5" id="badgeShelfGrid">
+<!-- 01 第一条证据 (已解锁) -->
+<div class="badge-shelf-item group relative bg-[#F9FBFA] hover:bg-white border border-bamboo-200/90 hover:border-bamboo-600 rounded-2xl p-3 flex flex-col items-center justify-between text-center transition-all duration-300 hover:shadow-academic-md hover:-translate-y-1 cursor-pointer focus:outline-none focus:ring-2 focus:ring-bamboo-600" data-status="unlocked" onclick="openBadgeModal('b1')" tabindex="0">
+<div class="w-full flex justify-between items-center text-[10px] mb-1.5">
+<span class="font-medium text-bamboo-700 bg-bamboo-100/70 px-1.5 py-0.5 rounded">No.01</span>
+<span class="inline-flex items-center gap-0.5 text-emerald-700 font-semibold text-[10px]"><i class="ph-fill ph-check-circle text-xs text-bamboo-600"></i>已解锁</span>
+</div>
+<div class="relative w-14 h-14 flex items-center justify-center my-1 group-hover:scale-105 transition-transform duration-300">
+<svg class="w-14 h-14 filter drop-shadow-sm" fill="none" viewbox="0 0 64 64"><circle cx="32" cy="32" fill="#F0F7F5" r="30" stroke="#2C6E63" stroke-dasharray="2 2" stroke-width="1.5"></circle><circle cx="32" cy="32" fill="#FFFFFF" r="25" stroke="#C3DFD6" stroke-width="1.5"></circle><path d="M22 42L25 31L39 17C40.5 15.5 43 15.5 44.5 17C46 18.5 46 21 44.5 22.5L30.5 36.5L22 42Z" fill="#E1EFEA" stroke="#2C6E63" stroke-width="1.5"></path><path d="M36 20L41 25M22 42L25 39" stroke="#1A413B" stroke-linecap="round" stroke-width="1.5"></path><circle cx="24" cy="40" fill="#2C6E63" r="1.5"></circle></svg>
+</div>
+<div class="mt-1.5 w-full">
+<h3 class="font-academic font-bold text-xs text-ink-900 truncate">第一条证据</h3>
+<div class="text-[10px] text-ink-400 mt-0.5">2023-10-18</div>
+</div>
+</div>
+<!-- 02 任务完成者 (已解锁) -->
+<div class="badge-shelf-item group relative bg-[#FDFBF7] hover:bg-white border border-amberOrange-200/80 hover:border-amberOrange-600 rounded-2xl p-3 flex flex-col items-center justify-between text-center transition-all duration-300 hover:shadow-academic-md hover:-translate-y-1 cursor-pointer focus:outline-none focus:ring-2 focus:ring-amberOrange-600" data-status="unlocked" onclick="openBadgeModal('b2')" tabindex="0">
+<div class="w-full flex justify-between items-center text-[10px] mb-1.5">
+<span class="font-medium text-amberOrange-700 bg-amberOrange-100/70 px-1.5 py-0.5 rounded">No.02</span>
+<span class="inline-flex items-center gap-0.5 text-amberOrange-700 font-semibold text-[10px]"><i class="ph-fill ph-check-circle text-xs text-amberOrange-600"></i>已解锁</span>
+</div>
+<div class="relative w-14 h-14 flex items-center justify-center my-1 group-hover:scale-105 transition-transform duration-300">
+<svg class="w-14 h-14 filter drop-shadow-sm" fill="none" viewbox="0 0 64 64"><rect fill="#FDF6EE" height="46" rx="12" stroke="#E68945" stroke-width="1.5" width="46" x="9" y="9"></rect><circle cx="32" cy="32" fill="#FFFFFF" r="16" stroke="#FAECD9" stroke-width="1.5"></circle><path d="M23 22H41V39C41 41 39 43 37 43H27C25 43 23 41 23 39V22Z" fill="#FAECD9" stroke="#D97736" stroke-width="1.5"></path><path d="M28 29L31 32L37 26" stroke="#B85E24" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><path d="M28 36H36" stroke="#B85E24" stroke-linecap="round" stroke-width="1.5"></path></svg>
+</div>
+<div class="mt-1.5 w-full">
+<h3 class="font-academic font-bold text-xs text-ink-900 truncate">任务完成者</h3>
+<div class="text-[10px] text-ink-400 mt-0.5">2023-10-21</div>
+</div>
+</div>
+<!-- 03 三日坚持 (已解锁) -->
+<div class="badge-shelf-item group relative bg-[#FCF8F7] hover:bg-white border border-[#EAC2BA] hover:border-[#C44D34] rounded-2xl p-3 flex flex-col items-center justify-between text-center transition-all duration-300 hover:shadow-academic-md hover:-translate-y-1 cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#C44D34]" data-status="unlocked" onclick="openBadgeModal('b3')" tabindex="0">
+<div class="w-full flex justify-between items-center text-[10px] mb-1.5">
+<span class="font-medium text-[#A63821] bg-[#FDEEEB] px-1.5 py-0.5 rounded">No.03</span>
+<span class="inline-flex items-center gap-0.5 text-[#A63821] font-semibold text-[10px]"><i class="ph-fill ph-check-circle text-xs text-[#C44D34"></i>已解锁</span>
+</div>
+<div class="relative w-14 h-14 flex items-center justify-center my-1 group-hover:scale-105 transition-transform duration-300">
+<svg class="w-14 h-14 filter drop-shadow-sm" fill="none" viewbox="0 0 64 64"><circle cx="32" cy="32" fill="#FFF5F3" r="28" stroke="#C44D34" stroke-width="1.5"></circle><circle cx="32" cy="32" fill="#FFFFFF" r="20" stroke="#F2D4CE" stroke-width="1.2"></circle><path d="M32 18C32 18 38 25 38 31C38 34.5 35 37 32 37C29 37 26 34.5 26 31C26 27.5 29 23 29 23C29 23 31 28 32 29C32 29 33 24 32 18Z" fill="#C44D34" stroke="#912914" stroke-linejoin="round" stroke-width="1.2"></path><circle cx="32" cy="32" fill="#FFF" r="2.5"></circle></svg>
+</div>
+<div class="mt-1.5 w-full">
+<h3 class="font-academic font-bold text-xs text-ink-900 truncate">三日坚持</h3>
+<div class="text-[10px] text-ink-400 mt-0.5">2023-10-24</div>
+</div>
+</div>
+<!-- 04 迁移思考 (待解锁) -->
+<div class="badge-shelf-item group relative bg-[#F8FAFC] hover:bg-white border border-dashed border-ink-200 hover:border-indigo-400 rounded-2xl p-3 flex flex-col items-center justify-between text-center transition-all duration-300 hover:shadow-academic-md hover:-translate-y-1 cursor-pointer focus:outline-none focus:ring-2 focus:ring-indigo-400" data-status="locked" onclick="openBadgeModal('b4')" tabindex="0">
+<div class="w-full flex justify-between items-center text-[10px] mb-1.5">
+<span class="font-medium text-ink-400 bg-paper-subtle px-1.5 py-0.5 rounded">No.04</span>
+<span class="inline-flex items-center gap-0.5 text-ink-400 text-[10px]"><i class="ph ph-lock-key text-xs"></i>待解锁</span>
+</div>
+<div class="relative w-14 h-14 flex items-center justify-center my-1 group-hover:scale-105 transition-transform duration-300">
+<svg class="w-14 h-14 opacity-65 group-hover:opacity-95 transition-opacity" fill="none" viewbox="0 0 64 64"><circle cx="32" cy="32" fill="#EEF2F6" r="27" stroke="#D3DEE5" stroke-width="1.5"></circle><path d="M20 40C20 40 25 30 32 30C39 30 44 40 44 40" stroke="#5F727F" stroke-linecap="round" stroke-width="1.8"></path><path d="M32 18V28M29 22H35" stroke="#8A9BA7" stroke-linecap="round" stroke-width="1.6"></path><circle cx="32" cy="18" fill="#5F727F" r="2.5"></circle></svg>
+</div>
+<div class="mt-1.5 w-full">
+<h3 class="font-academic font-bold text-xs text-ink-700 truncate">迁移思考</h3>
+<div class="text-[10px] text-ink-400 mt-0.5 truncate">差 1 次独立迁移</div>
+</div>
+</div>
+<!-- 05 反思记录 (待解锁) -->
+<div class="badge-shelf-item group relative bg-[#FBF9FD] hover:bg-white border border-dashed border-ink-200 hover:border-purple-300 rounded-2xl p-3 flex flex-col items-center justify-between text-center transition-all duration-300 hover:shadow-academic-md hover:-translate-y-1 cursor-pointer focus:outline-none focus:ring-2 focus:ring-purple-300" data-status="locked" onclick="openBadgeModal('b5')" tabindex="0">
+<div class="w-full flex justify-between items-center text-[10px] mb-1.5">
+<span class="font-medium text-ink-400 bg-paper-subtle px-1.5 py-0.5 rounded">No.05</span>
+<span class="inline-flex items-center gap-0.5 text-ink-400 text-[10px]"><i class="ph ph-lock-key text-xs"></i>待解锁</span>
+</div>
+<div class="relative w-14 h-14 flex items-center justify-center my-1 group-hover:scale-105 transition-transform duration-300">
+<svg class="w-14 h-14 opacity-65 group-hover:opacity-95 transition-opacity" fill="none" viewbox="0 0 64 64"><circle cx="32" cy="32" fill="#F6F3F9" r="27" stroke="#D3DEE5" stroke-width="1.5"></circle><rect height="22" rx="2.5" stroke="#5F727F" stroke-width="1.5" width="18" x="23" y="21"></rect><path d="M27 27H37M27 32H33" stroke="#8A9BA7" stroke-linecap="round" stroke-width="1.5"></path><path d="M35 34L39 30" stroke="#5F727F" stroke-linecap="round" stroke-width="1.6"></path></svg>
+</div>
+<div class="mt-1.5 w-full">
+<h3 class="font-academic font-bold text-xs text-ink-700 truncate">反思记录</h3>
+<div class="text-[10px] text-ink-400 mt-0.5 truncate">还需 1 次反思归因</div>
+</div>
+</div>
+<!-- 06 稳定复习 (待解锁) -->
+<div class="badge-shelf-item group relative bg-[#F8FAFA] hover:bg-white border border-dashed border-ink-200 hover:border-bamboo-300 rounded-2xl p-3 flex flex-col items-center justify-between text-center transition-all duration-300 hover:shadow-academic-md hover:-translate-y-1 cursor-pointer focus:outline-none focus:ring-2 focus:ring-bamboo-300" data-status="locked" onclick="openBadgeModal('b6')" tabindex="0">
+<div class="w-full flex justify-between items-center text-[10px] mb-1.5">
+<span class="font-medium text-ink-400 bg-paper-subtle px-1.5 py-0.5 rounded">No.06</span>
+<span class="inline-flex items-center gap-0.5 text-ink-400 text-[10px]"><i class="ph ph-lock-key text-xs"></i>待解锁</span>
+</div>
+<div class="relative w-14 h-14 flex items-center justify-center my-1 group-hover:scale-105 transition-transform duration-300">
+<svg class="w-14 h-14 opacity-65 group-hover:opacity-95 transition-opacity" fill="none" viewbox="0 0 64 64"><circle cx="32" cy="32" fill="#F0F7F5" r="27" stroke="#D3DEE5" stroke-width="1.5"></circle><path d="M22 37L28 31L33 34L41 24" stroke="#5F727F" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"></path><path d="M37 24H41V28" stroke="#5F727F" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"></path></svg>
+</div>
+<div class="mt-1.5 w-full">
+<h3 class="font-academic font-bold text-xs text-ink-700 truncate">稳定复习</h3>
+<div class="text-[10px] text-ink-400 mt-0.5 truncate">待间隔复习</div>
+</div>
+</div>
+<!-- 07 五日坚持 (待解锁) -->
+<div class="badge-shelf-item group relative bg-[#FCF9F7] hover:bg-white border border-dashed border-ink-200 hover:border-amberOrange-400 rounded-2xl p-3 flex flex-col items-center justify-between text-center transition-all duration-300 hover:shadow-academic-md hover:-translate-y-1 cursor-pointer focus:outline-none focus:ring-2 focus:ring-amberOrange-400" data-status="locked" onclick="openBadgeModal('b7')" tabindex="0">
+<div class="w-full flex justify-between items-center text-[10px] mb-1.5">
+<span class="font-medium text-ink-400 bg-paper-subtle px-1.5 py-0.5 rounded">No.07</span>
+<span class="inline-flex items-center gap-0.5 text-ink-400 text-[10px]"><i class="ph ph-lock-key text-xs"></i>待解锁</span>
+</div>
+<div class="relative w-14 h-14 flex items-center justify-center my-1 group-hover:scale-105 transition-transform duration-300">
+<svg class="w-14 h-14 opacity-65 group-hover:opacity-95 transition-opacity" fill="none" viewbox="0 0 64 64"><circle cx="32" cy="32" fill="#FBF6F3" r="27" stroke="#D3DEE5" stroke-width="1.5"></circle><rect height="22" rx="3" stroke="#5F727F" stroke-width="1.5" width="24" x="20" y="21"></rect><path d="M20 28H44M26 18V22M38 18V22" stroke="#8A9BA7" stroke-linecap="round" stroke-width="1.5"></path><path d="M32 32L33.5 35L37 35.5L34.5 38L35 41L32 39.5L29 41L29.5 38L27 35.5L30.5 35L32 32Z" fill="#8A9BA7"></path></svg>
+</div>
+<div class="mt-1.5 w-full">
+<h3 class="font-academic font-bold text-xs text-ink-700 truncate">五日坚持</h3>
+<div class="text-[10px] text-ink-400 mt-0.5 truncate">还差连续学习 2 天</div>
+</div>
+</div>
+<!-- 08 七日坚持 (待解锁) -->
+<div class="badge-shelf-item group relative bg-[#FCF8F5] hover:bg-white border border-dashed border-ink-200 hover:border-amberOrange-500 rounded-2xl p-3 flex flex-col items-center justify-between text-center transition-all duration-300 hover:shadow-academic-md hover:-translate-y-1 cursor-pointer focus:outline-none focus:ring-2 focus:ring-amberOrange-500" data-status="locked" onclick="openBadgeModal('b8')" tabindex="0">
+<div class="w-full flex justify-between items-center text-[10px] mb-1.5">
+<span class="font-medium text-ink-400 bg-paper-subtle px-1.5 py-0.5 rounded">No.08</span>
+<span class="inline-flex items-center gap-0.5 text-ink-400 text-[10px]"><i class="ph ph-lock-key text-xs"></i>待解锁</span>
+</div>
+<div class="relative w-14 h-14 flex items-center justify-center my-1 group-hover:scale-105 transition-transform duration-300">
+<svg class="w-14 h-14 opacity-65 group-hover:opacity-95 transition-opacity" fill="none" viewbox="0 0 64 64"><circle cx="32" cy="32" fill="#FBF5ED" r="27" stroke="#D3DEE5" stroke-width="1.5"></circle><path d="M32 20C32 20 37 26 37 31C37 34 34.5 36.5 32 36.5C29.5 36.5 27 34 27 31C27 28 30 24 30 24C30 24 31 27 32 28C32 28 33 24 32 20Z" stroke="#5F727F" stroke-linejoin="round" stroke-width="1.5"></path><circle cx="32" cy="32" r="18" stroke="#8A9BA7" stroke-dasharray="2 3" stroke-width="1.2"></circle></svg>
+</div>
+<div class="mt-1.5 w-full">
+<h3 class="font-academic font-bold text-xs text-ink-700 truncate">七日坚持</h3>
+<div class="text-[10px] text-ink-400 mt-0.5 truncate">还差连续学习 4 天</div>
+</div>
+</div>
+<!-- 09 十四日坚持 (待解锁) -->
+<div class="badge-shelf-item group relative bg-[#FDFBF7] hover:bg-white border border-dashed border-ink-200 hover:border-amberOrange-600 rounded-2xl p-3 flex flex-col items-center justify-between text-center transition-all duration-300 hover:shadow-academic-md hover:-translate-y-1 cursor-pointer focus:outline-none focus:ring-2 focus:ring-amberOrange-600" data-status="locked" onclick="openBadgeModal('b9')" tabindex="0">
+<div class="w-full flex justify-between items-center text-[10px] mb-1.5">
+<span class="font-medium text-ink-400 bg-paper-subtle px-1.5 py-0.5 rounded">No.09</span>
+<span class="inline-flex items-center gap-0.5 text-ink-400 text-[10px]"><i class="ph ph-lock-key text-xs"></i>待解锁</span>
+</div>
+<div class="relative w-14 h-14 flex items-center justify-center my-1 group-hover:scale-105 transition-transform duration-300">
+<svg class="w-14 h-14 opacity-65 group-hover:opacity-95 transition-opacity" fill="none" viewbox="0 0 64 64"><circle cx="32" cy="32" fill="#FBF7EF" r="27" stroke="#D3DEE5" stroke-width="1.5"></circle><circle cx="32" cy="32" r="18" stroke="#5F727F" stroke-width="1.3"></circle><circle cx="32" cy="32" r="12" stroke="#8A9BA7" stroke-dasharray="2 2" stroke-width="1"></circle><circle cx="44" cy="24" fill="#5F727F" r="2"></circle><circle cx="20" cy="40" fill="#5F727F" r="2"></circle></svg>
+</div>
+<div class="mt-1.5 w-full">
+<h3 class="font-academic font-bold text-xs text-ink-700 truncate">十四日坚持</h3>
+<div class="text-[10px] text-ink-400 mt-0.5 truncate">还差连续学习 11 天</div>
+</div>
+</div>
+<!-- 10 首次突破 (待解锁) -->
+<div class="badge-shelf-item group relative bg-[#F9FBFA] hover:bg-white border border-dashed border-ink-200 hover:border-bamboo-400 rounded-2xl p-3 flex flex-col items-center justify-between text-center transition-all duration-300 hover:shadow-academic-md hover:-translate-y-1 cursor-pointer focus:outline-none focus:ring-2 focus:ring-bamboo-400" data-status="locked" onclick="openBadgeModal('b10')" tabindex="0">
+<div class="w-full flex justify-between items-center text-[10px] mb-1.5">
+<span class="font-medium text-ink-400 bg-paper-subtle px-1.5 py-0.5 rounded">No.10</span>
+<span class="inline-flex items-center gap-0.5 text-ink-400 text-[10px]"><i class="ph ph-lock-key text-xs"></i>待解锁</span>
+</div>
+<div class="relative w-14 h-14 flex items-center justify-center my-1 group-hover:scale-105 transition-transform duration-300">
+<svg class="w-14 h-14 opacity-65 group-hover:opacity-95 transition-opacity" fill="none" viewbox="0 0 64 64"><circle cx="32" cy="32" fill="#F0F7F5" r="27" stroke="#D3DEE5" stroke-width="1.5"></circle><path d="M22 42L32 22L42 42" stroke="#5F727F" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path><path d="M32 20V34M28 26L32 20L36 26" stroke="#8A9BA7" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg>
+</div>
+<div class="mt-1.5 w-full">
+<h3 class="font-academic font-bold text-xs text-ink-700 truncate">首次突破</h3>
+<div class="text-[10px] text-ink-400 mt-0.5 truncate">需突破 1 个薄弱点</div>
+</div>
+</div>
+<!-- 11 知识点掌握 (待解锁) -->
+<div class="badge-shelf-item group relative bg-[#F8FAF9] hover:bg-white border border-dashed border-ink-200 hover:border-bamboo-500 rounded-2xl p-3 flex flex-col items-center justify-between text-center transition-all duration-300 hover:shadow-academic-md hover:-translate-y-1 cursor-pointer focus:outline-none focus:ring-2 focus:ring-bamboo-500" data-status="locked" onclick="openBadgeModal('b11')" tabindex="0">
+<div class="w-full flex justify-between items-center text-[10px] mb-1.5">
+<span class="font-medium text-ink-400 bg-paper-subtle px-1.5 py-0.5 rounded">No.11</span>
+<span class="inline-flex items-center gap-0.5 text-ink-400 text-[10px]"><i class="ph ph-lock-key text-xs"></i>待解锁</span>
+</div>
+<div class="relative w-14 h-14 flex items-center justify-center my-1 group-hover:scale-105 transition-transform duration-300">
+<svg class="w-14 h-14 opacity-65 group-hover:opacity-95 transition-opacity" fill="none" viewbox="0 0 64 64"><circle cx="32" cy="32" fill="#EFF6F3" r="27" stroke="#D3DEE5" stroke-width="1.5"></circle><path d="M32 18L43 23V33C43 39 38 44 32 46C26 44 21 39 21 33V23L32 18Z" stroke="#5F727F" stroke-linejoin="round" stroke-width="1.5"></path><circle cx="32" cy="32" fill="#8A9BA7" r="3"></circle></svg>
+</div>
+<div class="mt-1.5 w-full">
+<h3 class="font-academic font-bold text-xs text-ink-700 truncate">知识点掌握</h3>
+<div class="text-[10px] text-ink-400 mt-0.5 truncate">差 2 条独立证据</div>
+</div>
+</div>
+<!-- 12 三点掌握 (待解锁) -->
+<div class="badge-shelf-item group relative bg-[#F8FAFA] hover:bg-white border border-dashed border-ink-200 hover:border-bamboo-500 rounded-2xl p-3 flex flex-col items-center justify-between text-center transition-all duration-300 hover:shadow-academic-md hover:-translate-y-1 cursor-pointer focus:outline-none focus:ring-2 focus:ring-bamboo-500" data-status="locked" onclick="openBadgeModal('b12')" tabindex="0">
+<div class="w-full flex justify-between items-center text-[10px] mb-1.5">
+<span class="font-medium text-ink-400 bg-paper-subtle px-1.5 py-0.5 rounded">No.12</span>
+<span class="inline-flex items-center gap-0.5 text-ink-400 text-[10px]"><i class="ph ph-lock-key text-xs"></i>待解锁</span>
+</div>
+<div class="relative w-14 h-14 flex items-center justify-center my-1 group-hover:scale-105 transition-transform duration-300">
+<svg class="w-14 h-14 opacity-65 group-hover:opacity-95 transition-opacity" fill="none" viewbox="0 0 64 64"><circle cx="32" cy="32" fill="#F0F7F5" r="27" stroke="#D3DEE5" stroke-width="1.5"></circle><path d="M32 20L42 38H22L32 20Z" stroke="#5F727F" stroke-linejoin="round" stroke-width="1.6"></path><circle cx="32" cy="20" fill="#8A9BA7" r="2.5"></circle><circle cx="42" cy="38" fill="#8A9BA7" r="2.5"></circle><circle cx="22" cy="38" fill="#8A9BA7" r="2.5"></circle></svg>
+</div>
+<div class="mt-1.5 w-full">
+<h3 class="font-academic font-bold text-xs text-ink-700 truncate">三点掌握</h3>
+<div class="text-[10px] text-ink-400 mt-0.5 truncate">还差 2 知识点充分证据</div>
+</div>
+</div>
+<!-- 13 章节探索者 (待解锁) -->
+<div class="badge-shelf-item group relative bg-[#F7F9FB] hover:bg-white border border-dashed border-ink-200 hover:border-indigo-400 rounded-2xl p-3 flex flex-col items-center justify-between text-center transition-all duration-300 hover:shadow-academic-md hover:-translate-y-1 cursor-pointer focus:outline-none focus:ring-2 focus:ring-indigo-400" data-status="locked" onclick="openBadgeModal('b13')" tabindex="0">
+<div class="w-full flex justify-between items-center text-[10px] mb-1.5">
+<span class="font-medium text-ink-400 bg-paper-subtle px-1.5 py-0.5 rounded">No.13</span>
+<span class="inline-flex items-center gap-0.5 text-ink-400 text-[10px]"><i class="ph ph-lock-key text-xs"></i>待解锁</span>
+</div>
+<div class="relative w-14 h-14 flex items-center justify-center my-1 group-hover:scale-105 transition-transform duration-300">
+<svg class="w-14 h-14 opacity-65 group-hover:opacity-95 transition-opacity" fill="none" viewbox="0 0 64 64"><circle cx="32" cy="32" fill="#EEF4F8" r="27" stroke="#D3DEE5" stroke-width="1.5"></circle><path d="M20 38C24 36 29 36 32 38C35 36 40 36 44 38V24C40 22 35 22 32 24C29 22 24 22 20 24V38Z" stroke="#5F727F" stroke-linejoin="round" stroke-width="1.5"></path><path d="M32 24V38" stroke="#8A9BA7" stroke-width="1.5"></path></svg>
+</div>
+<div class="mt-1.5 w-full">
+<h3 class="font-academic font-bold text-xs text-ink-700 truncate">章节探索者</h3>
+<div class="text-[10px] text-ink-400 mt-0.5 truncate">还差剩余 2 任务</div>
+</div>
+</div>
+<!-- 14 路径践行者 (待解锁) -->
+<div class="badge-shelf-item group relative bg-[#F8FAFA] hover:bg-white border border-dashed border-ink-200 hover:border-bamboo-400 rounded-2xl p-3 flex flex-col items-center justify-between text-center transition-all duration-300 hover:shadow-academic-md hover:-translate-y-1 cursor-pointer focus:outline-none focus:ring-2 focus:ring-bamboo-400" data-status="locked" onclick="openBadgeModal('b14')" tabindex="0">
+<div class="w-full flex justify-between items-center text-[10px] mb-1.5">
+<span class="font-medium text-ink-400 bg-paper-subtle px-1.5 py-0.5 rounded">No.14</span>
+<span class="inline-flex items-center gap-0.5 text-ink-400 text-[10px]"><i class="ph ph-lock-key text-xs"></i>待解锁</span>
+</div>
+<div class="relative w-14 h-14 flex items-center justify-center my-1 group-hover:scale-105 transition-transform duration-300">
+<svg class="w-14 h-14 opacity-65 group-hover:opacity-95 transition-opacity" fill="none" viewbox="0 0 64 64"><circle cx="32" cy="32" fill="#F0F6F5" r="27" stroke="#D3DEE5" stroke-width="1.5"></circle><path d="M22 44C26 38 30 40 34 34C38 28 42 30 42 22" stroke="#5F727F" stroke-dasharray="2 2" stroke-linecap="round" stroke-width="1.8"></path><path d="M42 20V26L38 23L42 20Z" fill="#8A9BA7"></path><circle cx="22" cy="44" fill="#5F727F" r="2"></circle></svg>
+</div>
+<div class="mt-1.5 w-full">
+<h3 class="font-academic font-bold text-xs text-ink-700 truncate">路径践行者</h3>
+<div class="text-[10px] text-ink-400 mt-0.5 truncate">已完成 3/5 任务</div>
+</div>
+</div>
+<!-- 15 认真订正 (待解锁) -->
+<div class="badge-shelf-item group relative bg-[#FBF9FD] hover:bg-white border border-dashed border-ink-200 hover:border-purple-300 rounded-2xl p-3 flex flex-col items-center justify-between text-center transition-all duration-300 hover:shadow-academic-md hover:-translate-y-1 cursor-pointer focus:outline-none focus:ring-2 focus:ring-purple-300" data-status="locked" onclick="openBadgeModal('b15')" tabindex="0">
+<div class="w-full flex justify-between items-center text-[10px] mb-1.5">
+<span class="font-medium text-ink-400 bg-paper-subtle px-1.5 py-0.5 rounded">No.15</span>
+<span class="inline-flex items-center gap-0.5 text-ink-400 text-[10px]"><i class="ph ph-lock-key text-xs"></i>待解锁</span>
+</div>
+<div class="relative w-14 h-14 flex items-center justify-center my-1 group-hover:scale-105 transition-transform duration-300">
+<svg class="w-14 h-14 opacity-65 group-hover:opacity-95 transition-opacity" fill="none" viewbox="0 0 64 64"><circle cx="32" cy="32" fill="#F7F4F9" r="27" stroke="#D3DEE5" stroke-width="1.5"></circle><circle cx="30" cy="30" r="10" stroke="#5F727F" stroke-width="1.5"></circle><path d="M38 38L44 44" stroke="#5F727F" stroke-linecap="round" stroke-width="2"></path><path d="M27 30L29 32L34 27" stroke="#8A9BA7" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg>
+</div>
+<div class="mt-1.5 w-full">
+<h3 class="font-academic font-bold text-xs text-ink-700 truncate">认真订正</h3>
+<div class="text-[10px] text-ink-400 mt-0.5 truncate">已订正 1/3 次</div>
+</div>
+</div>
+<!-- 16 独立思考 (待解锁) -->
+<div class="badge-shelf-item group relative bg-[#F8FAF9] hover:bg-white border border-dashed border-ink-200 hover:border-bamboo-400 rounded-2xl p-3 flex flex-col items-center justify-between text-center transition-all duration-300 hover:shadow-academic-md hover:-translate-y-1 cursor-pointer focus:outline-none focus:ring-2 focus:ring-bamboo-400" data-status="locked" onclick="openBadgeModal('b16')" tabindex="0">
+<div class="w-full flex justify-between items-center text-[10px] mb-1.5">
+<span class="font-medium text-ink-400 bg-paper-subtle px-1.5 py-0.5 rounded">No.16</span>
+<span class="inline-flex items-center gap-0.5 text-ink-400 text-[10px]"><i class="ph ph-lock-key text-xs"></i>待解锁</span>
+</div>
+<div class="relative w-14 h-14 flex items-center justify-center my-1 group-hover:scale-105 transition-transform duration-300">
+<svg class="w-14 h-14 opacity-65 group-hover:opacity-95 transition-opacity" fill="none" viewbox="0 0 64 64"><circle cx="32" cy="32" fill="#EFF6F3" r="27" stroke="#D3DEE5" stroke-width="1.5"></circle><path d="M26 30C26 26.6863 28.6863 24 32 24C35.3137 24 38 26.6863 38 30C38 32.5 36.5 34 35 36H29C27.5 34 26 32.5 26 30Z" stroke="#5F727F" stroke-width="1.5"></path><path d="M29 39H35M30 42H34" stroke="#8A9BA7" stroke-linecap="round" stroke-width="1.5"></path></svg>
+</div>
+<div class="mt-1.5 w-full">
+<h3 class="font-academic font-bold text-xs text-ink-700 truncate">独立思考</h3>
+<div class="text-[10px] text-ink-400 mt-0.5 truncate">独立首答 1/3 题</div>
+</div>
+</div>
+<!-- 17 少提示挑战 (待解锁) -->
+<div class="badge-shelf-item group relative bg-[#FCFAF7] hover:bg-white border border-dashed border-ink-200 hover:border-amberOrange-400 rounded-2xl p-3 flex flex-col items-center justify-between text-center transition-all duration-300 hover:shadow-academic-md hover:-translate-y-1 cursor-pointer focus:outline-none focus:ring-2 focus:ring-amberOrange-400" data-status="locked" onclick="openBadgeModal('b17')" tabindex="0">
+<div class="w-full flex justify-between items-center text-[10px] mb-1.5">
+<span class="font-medium text-ink-400 bg-paper-subtle px-1.5 py-0.5 rounded">No.17</span>
+<span class="inline-flex items-center gap-0.5 text-ink-400 text-[10px]"><i class="ph ph-lock-key text-xs"></i>待解锁</span>
+</div>
+<div class="relative w-14 h-14 flex items-center justify-center my-1 group-hover:scale-105 transition-transform duration-300">
+<svg class="w-14 h-14 opacity-65 group-hover:opacity-95 transition-opacity" fill="none" viewbox="0 0 64 64"><circle cx="32" cy="32" fill="#FBF6EE" r="27" stroke="#D3DEE5" stroke-width="1.5"></circle><path d="M22 42H28V36H34V30H40V24H44" stroke="#5F727F" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path><circle cx="44" cy="22" fill="#8A9BA7" r="2"></circle></svg>
+</div>
+<div class="mt-1.5 w-full">
+<h3 class="font-academic font-bold text-xs text-ink-700 truncate">少提示挑战</h3>
+<div class="text-[10px] text-ink-400 mt-0.5 truncate">低提示答对 1/3 题</div>
+</div>
+</div>
+<!-- 18 迁移挑战 (待解锁) -->
+<div class="badge-shelf-item group relative bg-[#F8FAFC] hover:bg-white border border-dashed border-ink-200 hover:border-indigo-400 rounded-2xl p-3 flex flex-col items-center justify-between text-center transition-all duration-300 hover:shadow-academic-md hover:-translate-y-1 cursor-pointer focus:outline-none focus:ring-2 focus:ring-indigo-400" data-status="locked" onclick="openBadgeModal('b18')" tabindex="0">
+<div class="w-full flex justify-between items-center text-[10px] mb-1.5">
+<span class="font-medium text-ink-400 bg-paper-subtle px-1.5 py-0.5 rounded">No.18</span>
+<span class="inline-flex items-center gap-0.5 text-ink-400 text-[10px]"><i class="ph ph-lock-key text-xs"></i>待解锁</span>
+</div>
+<div class="relative w-14 h-14 flex items-center justify-center my-1 group-hover:scale-105 transition-transform duration-300">
+<svg class="w-14 h-14 opacity-65 group-hover:opacity-95 transition-opacity" fill="none" viewbox="0 0 64 64"><circle cx="32" cy="32" fill="#EFF3F9" r="27" stroke="#D3DEE5" stroke-width="1.5"></circle><path d="M20 40L28 26L34 32L44 18" stroke="#5F727F" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path><circle cx="44" cy="18" fill="#8A9BA7" r="2.5"></circle></svg>
+</div>
+<div class="mt-1.5 w-full">
+<h3 class="font-academic font-bold text-xs text-ink-700 truncate">迁移挑战</h3>
+<div class="text-[10px] text-ink-400 mt-0.5 truncate">已完成 1/3 道迁移</div>
+</div>
+</div>
+<!-- 19 反思习惯 (待解锁) -->
+<div class="badge-shelf-item group relative bg-[#FBF9FD] hover:bg-white border border-dashed border-ink-200 hover:border-purple-400 rounded-2xl p-3 flex flex-col items-center justify-between text-center transition-all duration-300 hover:shadow-academic-md hover:-translate-y-1 cursor-pointer focus:outline-none focus:ring-2 focus:ring-purple-400" data-status="locked" onclick="openBadgeModal('b19')" tabindex="0">
+<div class="w-full flex justify-between items-center text-[10px] mb-1.5">
+<span class="font-medium text-ink-400 bg-paper-subtle px-1.5 py-0.5 rounded">No.19</span>
+<span class="inline-flex items-center gap-0.5 text-ink-400 text-[10px]"><i class="ph ph-lock-key text-xs"></i>待解锁</span>
+</div>
+<div class="relative w-14 h-14 flex items-center justify-center my-1 group-hover:scale-105 transition-transform duration-300">
+<svg class="w-14 h-14 opacity-65 group-hover:opacity-95 transition-opacity" fill="none" viewbox="0 0 64 64"><circle cx="32" cy="32" fill="#F6F3F9" r="27" stroke="#D3DEE5" stroke-width="1.5"></circle><rect height="24" rx="3" stroke="#5F727F" stroke-width="1.5" width="20" x="22" y="20"></rect><path d="M22 26H42M28 32H36M28 36H34" stroke="#8A9BA7" stroke-linecap="round" stroke-width="1.4"></path></svg>
+</div>
+<div class="mt-1.5 w-full">
+<h3 class="font-academic font-bold text-xs text-ink-700 truncate">反思习惯</h3>
+<div class="text-[10px] text-ink-400 mt-0.5 truncate">已完成 1/3 次反思</div>
+</div>
+</div>
+<!-- 20 学习规划师 (待解锁) -->
+<div class="badge-shelf-item group relative bg-[#FDFBF7] hover:bg-white border border-dashed border-ink-200 hover:border-amberOrange-400 rounded-2xl p-3 flex flex-col items-center justify-between text-center transition-all duration-300 hover:shadow-academic-md hover:-translate-y-1 cursor-pointer focus:outline-none focus:ring-2 focus:ring-amberOrange-400" data-status="locked" onclick="openBadgeModal('b20')" tabindex="0">
+<div class="w-full flex justify-between items-center text-[10px] mb-1.5">
+<span class="font-medium text-ink-400 bg-paper-subtle px-1.5 py-0.5 rounded">No.20</span>
+<span class="inline-flex items-center gap-0.5 text-ink-400 text-[10px]"><i class="ph ph-lock-key text-xs"></i>待解锁</span>
+</div>
+<div class="relative w-14 h-14 flex items-center justify-center my-1 group-hover:scale-105 transition-transform duration-300">
+<svg class="w-14 h-14 opacity-65 group-hover:opacity-95 transition-opacity" fill="none" viewbox="0 0 64 64"><circle cx="32" cy="32" fill="#FBF6ED" r="27" stroke="#D3DEE5" stroke-width="1.5"></circle><circle cx="32" cy="32" r="16" stroke="#5F727F" stroke-width="1.5"></circle><path d="M32 24V32L38 32" stroke="#8A9BA7" stroke-linecap="round" stroke-width="1.6"></path></svg>
+</div>
+<div class="mt-1.5 w-full">
+<h3 class="font-academic font-bold text-xs text-ink-700 truncate">学习规划师</h3>
+<div class="text-[10px] text-ink-400 mt-0.5 truncate">已完成 3/7 次任务</div>
+</div>
+</div>
+<!-- 21 早起研习 (待解锁) -->
+<div class="badge-shelf-item group relative bg-[#FCFAF7] hover:bg-white border border-dashed border-ink-200 hover:border-amberOrange-300 rounded-2xl p-3 flex flex-col items-center justify-between text-center transition-all duration-300 hover:shadow-academic-md hover:-translate-y-1 cursor-pointer focus:outline-none focus:ring-2 focus:ring-amberOrange-300" data-status="locked" onclick="openBadgeModal('b21')" tabindex="0">
+<div class="w-full flex justify-between items-center text-[10px] mb-1.5">
+<span class="font-medium text-ink-400 bg-paper-subtle px-1.5 py-0.5 rounded">No.21</span>
+<span class="inline-flex items-center gap-0.5 text-ink-400 text-[10px]"><i class="ph ph-lock-key text-xs"></i>待解锁</span>
+</div>
+<div class="relative w-14 h-14 flex items-center justify-center my-1 group-hover:scale-105 transition-transform duration-300">
+<svg class="w-14 h-14 opacity-65 group-hover:opacity-95 transition-opacity" fill="none" viewbox="0 0 64 64"><circle cx="32" cy="32" fill="#FDF8F0" r="27" stroke="#D3DEE5" stroke-width="1.5"></circle><path d="M22 36C22 30.4772 26.4772 26 32 26C37.5228 26 42 30.4772 42 36H22Z" stroke="#5F727F" stroke-width="1.5"></path><path d="M32 18V22M19 24L22 26M45 24L42 26" stroke="#8A9BA7" stroke-linecap="round" stroke-width="1.5"></path></svg>
+</div>
+<div class="mt-1.5 w-full">
+<h3 class="font-academic font-bold text-xs text-ink-700 truncate">早起研习</h3>
+<div class="text-[10px] text-ink-400 mt-0.5 truncate">已完成 1/3 次早间</div>
+</div>
+</div>
+<!-- 22 专注时刻 (待解锁) -->
+<div class="badge-shelf-item group relative bg-[#F7F9FB] hover:bg-white border border-dashed border-ink-200 hover:border-indigo-300 rounded-2xl p-3 flex flex-col items-center justify-between text-center transition-all duration-300 hover:shadow-academic-md hover:-translate-y-1 cursor-pointer focus:outline-none focus:ring-2 focus:ring-indigo-300" data-status="locked" onclick="openBadgeModal('b22')" tabindex="0">
+<div class="w-full flex justify-between items-center text-[10px] mb-1.5">
+<span class="font-medium text-ink-400 bg-paper-subtle px-1.5 py-0.5 rounded">No.22</span>
+<span class="inline-flex items-center gap-0.5 text-ink-400 text-[10px]"><i class="ph ph-lock-key text-xs"></i>待解锁</span>
+</div>
+<div class="relative w-14 h-14 flex items-center justify-center my-1 group-hover:scale-105 transition-transform duration-300">
+<svg class="w-14 h-14 opacity-65 group-hover:opacity-95 transition-opacity" fill="none" viewbox="0 0 64 64"><circle cx="32" cy="32" fill="#EEF3F8" r="27" stroke="#D3DEE5" stroke-width="1.5"></circle><path d="M24 20H40L34 32L40 44H24L30 32L24 20Z" stroke="#5F727F" stroke-linejoin="round" stroke-width="1.5"></path></svg>
+</div>
+<div class="mt-1.5 w-full">
+<h3 class="font-academic font-bold text-xs text-ink-700 truncate">专注时刻</h3>
+<div class="text-[10px] text-ink-400 mt-0.5 truncate">待专注达 20 分钟</div>
+</div>
+</div>
+<!-- 23 进步轨迹 (待解锁) -->
+<div class="badge-shelf-item group relative bg-[#F8FAF9] hover:bg-white border border-dashed border-ink-200 hover:border-bamboo-300 rounded-2xl p-3 flex flex-col items-center justify-between text-center transition-all duration-300 hover:shadow-academic-md hover:-translate-y-1 cursor-pointer focus:outline-none focus:ring-2 focus:ring-bamboo-300" data-status="locked" onclick="openBadgeModal('b23')" tabindex="0">
+<div class="w-full flex justify-between items-center text-[10px] mb-1.5">
+<span class="font-medium text-ink-400 bg-paper-subtle px-1.5 py-0.5 rounded">No.23</span>
+<span class="inline-flex items-center gap-0.5 text-ink-400 text-[10px]"><i class="ph ph-lock-key text-xs"></i>待解锁</span>
+</div>
+<div class="relative w-14 h-14 flex items-center justify-center my-1 group-hover:scale-105 transition-transform duration-300">
+<svg class="w-14 h-14 opacity-65 group-hover:opacity-95 transition-opacity" fill="none" viewbox="0 0 64 64"><circle cx="32" cy="32" fill="#F0F6F4" r="27" stroke="#D3DEE5" stroke-width="1.5"></circle><path d="M20 40C25 40 28 36 32 30C36 24 39 20 44 20" stroke="#5F727F" stroke-linecap="round" stroke-width="1.8"></path><circle cx="44" cy="20" fill="#8A9BA7" r="2"></circle></svg>
+</div>
+<div class="mt-1.5 w-full">
+<h3 class="font-academic font-bold text-xs text-ink-700 truncate">进步轨迹</h3>
+<div class="text-[10px] text-ink-400 mt-0.5 truncate">待下一周期正向复测</div>
+</div>
+</div>
+<!-- 24 坚持成长 (待解锁) -->
+<div class="badge-shelf-item group relative bg-[#F8FAF9] hover:bg-white border border-dashed border-ink-200 hover:border-bamboo-400 rounded-2xl p-3 flex flex-col items-center justify-between text-center transition-all duration-300 hover:shadow-academic-md hover:-translate-y-1 cursor-pointer focus:outline-none focus:ring-2 focus:ring-bamboo-400" data-status="locked" onclick="openBadgeModal('b24')" tabindex="0">
+<div class="w-full flex justify-between items-center text-[10px] mb-1.5">
+<span class="font-medium text-ink-400 bg-paper-subtle px-1.5 py-0.5 rounded">No.24</span>
+<span class="inline-flex items-center gap-0.5 text-ink-400 text-[10px]"><i class="ph ph-lock-key text-xs"></i>待解锁</span>
+</div>
+<div class="relative w-14 h-14 flex items-center justify-center my-1 group-hover:scale-105 transition-transform duration-300">
+<svg class="w-14 h-14 opacity-65 group-hover:opacity-95 transition-opacity" fill="none" viewbox="0 0 64 64"><circle cx="32" cy="32" fill="#F0F7F4" r="27" stroke="#D3DEE5" stroke-width="1.5"></circle><path d="M32 44V26M32 34C28 34 26 30 26 30C26 30 30 28 32 32M32 28C36 28 38 24 38 24C38 24 34 22 32 26" stroke="#5F727F" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"></path></svg>
+</div>
+<div class="mt-1.5 w-full">
+<h3 class="font-academic font-bold text-xs text-ink-700 truncate">坚持成长</h3>
+<div class="text-[10px] text-ink-400 mt-0.5 truncate">已完成 10/20 项任务</div>
+</div>
+</div>
+<!-- 25 研习里程碑 (待解锁) -->
+<div class="badge-shelf-item group relative bg-[#FBF9F5] hover:bg-white border border-dashed border-ink-200 hover:border-amberOrange-500 rounded-2xl p-3 flex flex-col items-center justify-between text-center transition-all duration-300 hover:shadow-academic-md hover:-translate-y-1 cursor-pointer focus:outline-none focus:ring-2 focus:ring-amberOrange-500" data-status="locked" onclick="openBadgeModal('b25')" tabindex="0">
+<div class="w-full flex justify-between items-center text-[10px] mb-1.5">
+<span class="font-medium text-ink-400 bg-paper-subtle px-1.5 py-0.5 rounded">No.25</span>
+<span class="inline-flex items-center gap-0.5 text-ink-400 text-[10px]"><i class="ph ph-lock-key text-xs"></i>待解锁</span>
+</div>
+<div class="relative w-14 h-14 flex items-center justify-center my-1 group-hover:scale-105 transition-transform duration-300">
+<svg class="w-14 h-14 opacity-65 group-hover:opacity-95 transition-opacity" fill="none" viewbox="0 0 64 64"><circle cx="32" cy="32" fill="#FAF5EA" r="27" stroke="#D3DEE5" stroke-width="1.5"></circle><path d="M18 44L32 20L46 44" stroke="#5F727F" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path><path d="M32 20L36 28H28L32 20Z" fill="#8A9BA7"></path><circle cx="32" cy="16" fill="#5F727F" r="2"></circle></svg>
+</div>
+<div class="mt-1.5 w-full">
+<h3 class="font-academic font-bold text-xs text-ink-700 truncate">研习里程碑</h3>
+<div class="text-[10px] text-ink-400 mt-0.5 truncate">已累计 42/100 证据</div>
+</div>
+</div>
+</div>
+<!-- 底部严谨学术说明栏 -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between text-xs text-ink-400 pt-2 border-t border-ink-100/70 gap-2">
+<span class="flex items-center gap-1.5">
+<i class="ph-fill ph-shield-check text-bamboo-600 text-sm shrink-0"></i>
+      所有勋章均依据真实自适应研习事件可信上锁与核发，杜绝虚假成就感。
+    </span>
+<span class="text-ink-500 font-medium text-[11px] flex items-center gap-1">
+<i class="ph ph-cursor-click"></i> 点击任意徽章查看教育测量学证据链与核验报告
+    </span>
+</div>
+</div>
+<!-- 5. 可领取奖励区域 -->
+<div class="bg-white rounded-2xl p-6 border border-ink-100 shadow-academic-sm flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<div class="space-y-0.5">
+<h2 class="font-academic text-lg font-bold text-ink-900">可领取奖励</h2>
+<p class="text-xs text-ink-400">完成真实研习节点，获取专属学习卡片与研习荣誉</p>
+</div>
+<div class="text-xs text-ink-400">点击安全领取 · 幂等校验保障</div>
+</div>
+<!-- 奖励列表卡片 -->
+<div class="flex flex-col gap-3" id="rewardsList">
+<!-- 由 JS 渲染 -->
+</div>
+</div>
+</div>
+<!-- ========================================================
+           VIEW 2: 匿名排行榜页面 (Peer Leaderboard)
+           ======================================================== -->
+<div class="hidden flex flex-col gap-6 fade-transition" id="viewLeaderboard">
+<!-- 顶部标题区 -->
+<div class="bg-white rounded-2xl p-6 border border-ink-100 shadow-academic-sm flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+<div class="space-y-1">
+<div class="inline-flex items-center gap-2 px-2.5 py-0.5 rounded-full bg-amberOrange-50 text-amberOrange-700 text-xs font-medium">
+<i class="ph-fill ph-users"></i>
+<span>同行互勉 · 零隐私泄漏</span>
+</div>
+<h1 class="font-academic text-2xl font-bold text-ink-900">学习同行榜</h1>
+<p class="text-ink-500 text-sm">看看大家如何用稳定的学习节奏积累进步。本榜单全量匿名脱敏，不作为排名考核。</p>
+</div>
+<!-- 刷新榜单按钮 -->
+<button class="px-3.5 py-2 rounded-xl bg-paper-subtle hover:bg-ink-100 text-ink-600 text-xs font-medium flex items-center gap-1.5 transition-colors self-start sm:self-auto" onclick="fetchLeaderboard(true)">
+<i class="ph ph-arrows-clockwise text-sm"></i>
+<span>刷新最新数据</span>
+</button>
+</div>
+<!-- 榜单主体卡片 -->
+<div class="bg-white rounded-2xl border border-ink-100 shadow-academic-sm overflow-hidden flex flex-col">
+<!-- 表头 -->
+<div class="grid grid-cols-12 px-6 py-3.5 bg-paper-subtle/70 border-b border-ink-100 text-xs font-semibold text-ink-500">
+<div class="col-span-2 sm:col-span-1 text-center">排名</div>
+<div class="col-span-6 sm:col-span-6">学习者昵称 (匿名)</div>
+<div class="col-span-4 sm:col-span-3 text-right sm:text-left">累计研习积分</div>
+<div class="hidden sm:block sm:col-span-2 text-right">成就阶段</div>
+</div>
+<!-- 榜单内容行列表 -->
+<div class="divide-y divide-ink-100" id="leaderboardRowsContainer">
+<!-- 动态渲染 -->
+</div>
+<!-- 榜单底部说明 -->
+<div class="p-4 bg-paper-warm text-[12px] text-ink-400 flex items-center justify-between border-t border-ink-100">
+<span class="flex items-center gap-1">
+<i class="ph ph-lock-key"></i>
+              所有学生均采用哈希匿名代号（例如“学习者A3F2”），不展示真实头像或个人资料。
+            </span>
+<span class="text-ink-300">更新周期：实时事件同步</span>
+</div>
+</div>
+<!-- 空状态演示容器 (可在演示中切换) -->
+<div class="hidden bg-white rounded-2xl p-12 border border-dashed border-ink-200 text-center flex flex-col items-center justify-center" id="leaderboardEmptyState">
+<div class="w-14 h-14 rounded-full bg-paper-subtle text-ink-400 flex items-center justify-center text-2xl mb-3">
+<i class="ph ph-hourglass-simple"></i>
+</div>
+<h3 class="font-academic text-base font-bold text-ink-800">暂无足够的学习记录</h3>
+<p class="text-xs text-ink-500 max-w-md mt-1 leading-relaxed">
+            暂时还没有足够的学习记录，完成一次真实学习任务后这里会出现你的同行榜位置。
+          </p>
+<button class="mt-4 px-4 py-2 bg-bamboo-600 text-white rounded-xl text-xs font-semibold hover:bg-bamboo-700 transition-colors" onclick="fetchLeaderboard(false)">
+            恢复示例榜单
+          </button>
+</div>
+</div>
+</main>
+</div>
+<!-- 轻量 Toast 提示框 (无夸张弹窗) -->
+<div class="fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none flex items-center gap-2.5 px-4 py-3 bg-ink-900 text-white text-xs font-medium rounded-xl shadow-academic-md border border-ink-700" id="toastNotification">
+<i class="ph-fill ph-check-circle text-emerald-400 text-base" id="toastIcon"></i>
+<span id="toastMessage">操作成功</span>
+</div>

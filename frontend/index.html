@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>学有所径</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Noto+Serif:wght@100..900&display=swap" rel="stylesheet" />
+    <script src="/vendor/tailwind.js"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              'surface-container-low': '#eef4fe',
+              'surface-container-highest': '#dde3ec',
+              'primary-container': '#2c6e63',
+              'on-primary': '#ffffff',
+              'on-primary-fixed-variant': '#005046',
+              'on-tertiary-fixed': '#131c28',
+              'on-secondary-container': '#6d3000',
+              'outline': '#6f7976',
+              'outline-variant': '#bfc9c5',
+              'primary-fixed-dim': '#92d3c5',
+              'on-tertiary': '#ffffff',
+              'surface': '#f7f9ff',
+              'inverse-primary': '#92d3c5',
+              'tertiary': '#434c59',
+              'on-tertiary-fixed-variant': '#3e4755',
+              'on-primary-container': '#aceee0',
+              'error-container': '#ffdad6',
+              'secondary-fixed-dim': '#ffb68c',
+              'secondary': '#994703',
+              'surface-tint': '#26695e',
+              'tertiary-container': '#5b6472',
+              'on-surface': '#161c23',
+              'on-secondary-fixed-variant': '#753400',
+              'primary': '#09554b',
+              'surface-container-lowest': '#ffffff',
+              'on-tertiary-container': '#d8e1f2',
+              'on-primary-fixed': '#00201b',
+              'on-secondary': '#ffffff',
+              'on-error': '#ffffff',
+              'primary-fixed': '#adefe1',
+              'inverse-surface': '#2b3138',
+              'surface-bright': '#f7f9ff',
+              'surface-container': '#e9eef8',
+              'on-secondary-fixed-variant': '#753400',
+              'surface-dim': '#d5dae4',
+              'secondary-container': '#fc934f',
+              'on-surface-variant': '#3f4946',
+              'surface-container-high': '#e3e8f2',
+              'on-background': '#161c23',
+              'background': '#f7f9ff',
+              'primary-hover': '#245A51',
+              'primary-light': '#EBF4F2',
+              'primary-container-soft': '#D7ECE7',
+              'surface-bg': '#F4F7F9',
+              'surface-card': '#FFFFFF',
+              'surface-subtle': '#EDF2F6',
+              'surface-muted': '#E5EBEF',
+              'ink': '#1A2725',
+              'on-ink-variant': '#4E5F5C',
+              'outline-dim': '#D4DFDC',
+              'outline-border': '#CBD6D3',
+              'secondary-accent': '#E28743',
+              'secondary-light': '#FDF4EC',
+              'secondary-border': '#F8D9C0',
+              'secondary-dark': '#9A4D15',
+              'status-mastered': '#1E7E6B',
+              'status-mastered-bg': '#E6F5F1',
+              'status-locked': '#869593',
+            },
+            borderRadius: {
+              DEFAULT: '0.25rem',
+              lg: '0.5rem',
+              xl: '0.75rem',
+              full: '9999px',
+            },
+            spacing: {
+              'container-max': '1140px',
+              'space-xs': '0.5rem',
+              'reading-max': '680px',
+              'gutter-mobile': '1rem',
+              'space-xl': '2rem',
+              'space-lg': '1.5rem',
+              'space-sm': '0.75rem',
+              'gutter-desktop': '1.5rem',
+              'space-2xl': '2.5rem',
+              'space-md': '1rem',
+              'space-3xl': '3.5rem',
+              'space-2xs': '0.25rem',
+            },
+            fontFamily: {
+              'display-lg': ['Noto Serif'],
+              'title-md': ['Inter'],
+              'body-sm': ['Inter'],
+              'display-lg-mobile': ['Noto Serif'],
+              'headline-md': ['Noto Serif'],
+              'headline-lg': ['Noto Serif'],
+              'body-md': ['Inter'],
+              'headline-sm': ['Inter'],
+              'title-lg': ['Inter'],
+              'label-md': ['Inter'],
+              'label-sm': ['Inter'],
+              'body-lg': ['Inter'],
+              sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'PingFang SC', 'Segoe UI', 'sans-serif'],
+              serif: ['Noto Serif SC', 'Noto Serif', 'serif'],
+            },
+            fontSize: {
+              'display-lg': ['32px', { lineHeight: '44px', fontWeight: '600' }],
+              'title-md': ['15px', { lineHeight: '22px', fontWeight: '500' }],
+              'body-sm': ['13px', { lineHeight: '20px', fontWeight: '400' }],
+              'display-lg-mobile': ['26px', { lineHeight: '36px', fontWeight: '600' }],
+              'headline-md': ['20px', { lineHeight: '30px', fontWeight: '600' }],
+              'headline-lg': ['24px', { lineHeight: '34px', fontWeight: '600' }],
+              'body-md': ['14px', { lineHeight: '22px', fontWeight: '400' }],
+              'headline-sm': ['18px', { lineHeight: '26px', fontWeight: '600' }],
+              'title-lg': ['17px', { lineHeight: '24px', fontWeight: '600' }],
+              'label-md': ['13px', { lineHeight: '18px', fontWeight: '500' }],
+              'label-sm': ['12px', { lineHeight: '16px', fontWeight: '500' }],
+              'body-lg': ['16px', { lineHeight: '26px', fontWeight: '400' }],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

@@ -1,0 +1,99 @@
+{
+  "course_id": "quadratic",
+  "title": "初中二次函数",
+  "description": "专题课程包：6 个知识点、300 道核验题（三批，第三批为参数化模板生成）与配套讲解资料。",
+  "policy_version": "v1",
+  "concepts": [
+    {
+      "id": "C01",
+      "title": "平方与代入",
+      "prerequisite_ids": [],
+      "resource_ids": [
+        "res-c01"
+      ]
+    },
+    {
+      "id": "C02",
+      "title": "函数输入输出",
+      "prerequisite_ids": [
+        "C01"
+      ],
+      "resource_ids": [
+        "res-c02"
+      ]
+    },
+    {
+      "id": "C03",
+      "title": "二次函数图像",
+      "prerequisite_ids": [
+        "C02"
+      ],
+      "resource_ids": [
+        "res-c03"
+      ]
+    },
+    {
+      "id": "C04",
+      "title": "顶点式",
+      "prerequisite_ids": [
+        "C03"
+      ],
+      "resource_ids": [
+        "res-c04"
+      ]
+    },
+    {
+      "id": "C05",
+      "title": "开口与对称轴",
+      "prerequisite_ids": [
+        "C03"
+      ],
+      "resource_ids": [
+        "res-c05"
+      ]
+    },
+    {
+      "id": "C06",
+      "title": "简单应用",
+      "prerequisite_ids": [
+        "C04",
+        "C05"
+      ],
+      "resource_ids": [
+        "res-c06"
+      ]
+    }
+  ],
+  "resources": [
+    {
+      "id": "res-c01",
+      "title": "平方与代入",
+      "path": "resources/C01.md"
+    },
+    {
+      "id": "res-c02",
+      "title": "函数输入输出",
+      "path": "resources/C02.md"
+    },
+    {
+      "id": "res-c03",
+      "title": "二次函数图像",
+      "path": "resources/C03.md"
+    },
+    {
+      "id": "res-c04",
+      "title": "顶点式",
+      "path": "resources/C04.md"
+    },
+    {
+      "id": "res-c05",
+      "title": "开口与对称轴",
+      "path": "resources/C05.md"
+    },
+    {
+      "id": "res-c06",
+      "title": "简单应用",
+      "path": "resources/C06.md"
+    }
+  ]
+}
